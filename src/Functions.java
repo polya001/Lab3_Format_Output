@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import  java.time.*;
 import java.time.temporal.ChronoUnit;
 
-import static java.lang.System.exit;
+
 
 /**
 
@@ -102,16 +102,16 @@ public class Functions {
      * @param year year of birth
      */
     public static void OutPut(String InSurname, String InName, String InPatronymic,int number,int month, int year){
-        char Name = 0;
-        char Patronymic = 0;
-        char last=0;
+        char Name;
+        char Patronymic;
+        char last;
         try {
             Name = InName.charAt(0);
             Patronymic = InPatronymic.charAt(0);
 
             //Gender determination by ending patronymic
             last=InPatronymic.charAt(InPatronymic.length()-1);
-            String gender = null;
+            String gender;
             if (last=='а'){
                 gender="женский";
             }

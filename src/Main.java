@@ -1,9 +1,7 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-import java.io.*;
+
 import java.lang.String;
 public class Main {
-    public static void main(String[] args) throws FormatException {
+    public static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
 
@@ -24,7 +22,7 @@ public class Main {
         try {
              Number = InputDate.substring(0,2);
              Month = InputDate.substring(3,5);
-             Year = InputDate.substring(6,InputDate.length());
+             Year = InputDate.substring(6);
          }
          catch (StringIndexOutOfBoundsException e){
              System.out.println("Ошибка при вводе данных");
@@ -34,6 +32,8 @@ public class Main {
 
         //Formatted data output
         try {
+            assert Month != null;
+            assert Year != null;
             Functions.OutPut(InputSurname,InputName, InputPatronymic,Integer.parseInt(Number),Integer.parseInt(Month),Integer.parseInt(Year));
 
 
