@@ -129,7 +129,6 @@ public class Functions {
         //Age calculation
         LocalDate today             = LocalDate.now();
         LocalDate birthday          = LocalDate.of(year, month, number);
-        LocalDate thisYearsBirthday = birthday.with(Year.now());
         long age = ChronoUnit.YEARS.between(birthday, today);
 
         //Output format for the word "years"
